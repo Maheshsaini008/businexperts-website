@@ -1,0 +1,1088 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | Businexperts</title>
+  <meta name="description" content="Contact Businexperts for website development, SEO, digital marketing, Google Ads and Meta Ads services. Get in touch to discuss your business goals.">
+  <meta name="keywords" content="Contact Businexperts, website development enquiry, digital marketing services, SEO, Google Ads, Meta Ads">
+  <meta name="author" content="Businexperts">
+  <meta name="theme-color" content="#e5232e">
+
+  <!-- Replace with your real domain before publishing -->
+  <link rel="canonical" href="https://yourdomain.com/Contact.html">
+
+  <style>
+    :root {
+      --red: #e5232e;
+      --red-dark: #bd1721;
+      --black: #171717;
+      --text: #555;
+      --light: #f7f7f8;
+      --white: #fff;
+      --border: #e9e9e9;
+      --container: 1180px;
+      --shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--container), 92%);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 75px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--red);
+      background: #fff0f1;
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: var(--red);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 23px;
+      border: 2px solid var(--red);
+      border-radius: 6px;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 700;
+      transition: 0.25s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--red-dark);
+      border-color: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    /* COMMON HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 3px 18px rgba(0, 0, 0, 0.035);
+    }
+
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 8px;
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: -1px;
+    }
+
+    .brand-name {
+      display: block;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+
+    .brand-name span {
+      color: var(--red);
+    }
+
+    .brand-tagline {
+      display: block;
+      color: #777;
+      font-size: 10px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .main-nav a {
+      position: relative;
+      color: #333;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: color 0.2s ease;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: var(--red);
+    }
+
+    .main-nav a.active::after {
+      content: "";
+      height: 2px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      background: var(--red);
+    }
+
+    .header-cta {
+      padding: 10px 17px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--black);
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    /* CONTACT HERO */
+
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 75px 0;
+      background:
+        radial-gradient(circle at 90% 15%, rgba(229, 35, 46, 0.12), transparent 30%),
+        linear-gradient(120deg, #fff, #fff8f8);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(38px, 5vw, 57px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .page-hero p {
+      max-width: 600px;
+      color: var(--text);
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+
+    .hero-visual {
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 17px;
+      background: var(--black);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-visual::before {
+      content: "";
+      width: 240px;
+      height: 240px;
+      position: absolute;
+      top: -75px;
+      right: -45px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    .hero-visual-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    .hero-visual-content small {
+      color: #ffb6bb;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .hero-visual-content h2 {
+      font-size: 34px;
+      line-height: 1.25;
+      margin: 15px 0;
+    }
+
+    .hero-visual-content p {
+      color: #ddd;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* CONTACT CONTENT */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .contact-info h2,
+    .form-card h2 {
+      font-size: clamp(27px, 3vw, 35px);
+      line-height: 1.25;
+      margin-bottom: 13px;
+    }
+
+    .contact-info > p,
+    .form-intro {
+      color: var(--text);
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .info-cards {
+      display: grid;
+      gap: 15px;
+    }
+
+    .info-card {
+      display: flex;
+      gap: 15px;
+      padding: 20px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: 0.2s ease;
+    }
+
+    .info-card:hover {
+      border-color: #f0b4b8;
+      transform: translateY(-2px);
+    }
+
+    .info-icon {
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: #fff0f1;
+      color: var(--red);
+      border-radius: 10px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .info-card h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .info-card p,
+    .info-card a {
+      color: var(--text);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .info-card a:hover {
+      color: var(--red);
+    }
+
+    .contact-note {
+      margin-top: 23px;
+      padding: 20px;
+      border-left: 4px solid var(--red);
+      background: #fff6f6;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .contact-note h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .contact-note p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* ENQUIRY FORM */
+
+    .form-card {
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      background: var(--white);
+    }
+
+    .form-intro {
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 19px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      min-width: 0;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      min-width: 0;
+      padding: 12px 13px;
+      border: 1px solid #dcdcdc;
+      border-radius: 6px;
+      background: #fff;
+      color: var(--black);
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(229, 35, 46, 0.08);
+    }
+
+    .form-group textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      margin-top: 22px;
+      width: 100%;
+    }
+
+    .form-disclaimer {
+      margin-top: 13px;
+      color: #777;
+      font-size: 12px;
+    }
+
+    /* BOTTOM STRIP */
+
+    .contact-strip {
+      padding: 35px 0;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .strip-inner h2 {
+      font-size: clamp(23px, 3vw, 31px);
+      line-height: 1.25;
+    }
+
+    .strip-inner p {
+      color: #ccc;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    .strip-inner .btn {
+      flex-shrink: 0;
+    }
+
+    /* COMMON FOOTER */
+
+    .site-footer {
+      padding: 58px 0 0;
+      background: #141414;
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 1fr 1fr;
+      gap: 38px;
+      padding-bottom: 42px;
+    }
+
+    .footer-brand .brand-name {
+      color: var(--white);
+    }
+
+    .footer-brand > p {
+      max-width: 320px;
+      color: #c5c5c5;
+      font-size: 14px;
+      margin-top: 18px;
+    }
+
+    .footer-column h3 {
+      font-size: 16px;
+      margin-bottom: 17px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+      color: #c5c5c5;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-column a:hover {
+      color: #ff8c93;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #353535;
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      color: #bcbcbc;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 1050px) {
+      .main-nav {
+        gap: 17px;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        min-height: 74px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 14px 5% 22px;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.06);
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .main-nav.open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main-nav a {
+        padding: 12px 5px;
+        border-bottom: 1px solid #f1f1f1;
+      }
+
+      .main-nav a.active::after {
+        display: none;
+      }
+
+      .section {
+        padding: 55px 0;
+      }
+
+      .hero-grid,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .page-hero {
+        padding: 60px 0;
+      }
+
+      .hero-visual {
+        min-height: 260px;
+      }
+
+      .strip-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: 90%;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+
+      .brand-name {
+        font-size: 19px;
+      }
+
+      .brand-tagline {
+        font-size: 9px;
+      }
+
+      .page-hero h1 {
+        font-size: 39px;
+        letter-spacing: -1px;
+      }
+
+      .page-hero p {
+        font-size: 15px;
+      }
+
+      .hero-visual-content h2 {
+        font-size: 28px;
+      }
+
+      .form-card {
+        padding: 24px 18px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full-width {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Businexperts",
+    "email": "businexperts@gmail.com",
+    "telephone": "+91 9034545850",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kaithal",
+      "addressRegion": "Haryana",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- SAME HEADER AS OTHER PAGES -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="brand" aria-label="Businexperts Home">
+        <span class="brand-mark">BE</span>
+        <span>
+          <span class="brand-name">Busin<span>experts</span></span>
+          <span class="brand-tagline">Digital Growth Partner</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mainNav"
+        type="button"
+      >☰</button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="Services.html">Services</a>
+        <a href="Portfolio.html">Our Portfolio</a>
+        <a href="Contact.html" class="active" aria-current="page">Contact Us</a>
+      </nav>
+
+      <a href="#contactForm" class="btn header-cta">Let's Talk ↗</a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CONTACT HERO -->
+    <section class="page-hero">
+      <div class="container hero-grid">
+
+        <div>
+          <span class="eyebrow">Get in Touch</span>
+
+          <h1>Let's Talk About Your <span class="highlight">Business Goals</span></h1>
+
+          <p>
+            Looking for a website or digital marketing support? Tell us
+            about your business and the services you need. We'd be happy
+            to discuss your project and possible next steps.
+          </p>
+
+          <a href="#contactForm" class="btn">Send an Enquiry ↗</a>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-visual-content">
+            <small>Start a Conversation</small>
+            <h2>Your Next Digital Step Starts Here.</h2>
+            <p>
+              Share your requirements with Businexperts and let's explore
+              a solution that fits your business.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS + FORM -->
+    <section class="section">
+      <div class="container contact-layout">
+
+        <!-- CONTACT INFORMATION -->
+        <div class="contact-info">
+          <span class="eyebrow">Contact Information</span>
+
+          <h2>We'd Love to <span class="highlight">Hear From You</span></h2>
+
+          <p>
+            Have a question or a project in mind? Reach out using the
+            contact details below, or send an enquiry through the form.
+          </p>
+
+          <div class="info-cards">
+
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">✉</div>
+              <div>
+                <h3>Email Us</h3>
+                <a href="mailto:businexperts@gmail.com">businexperts@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">☎</div>
+              <div>
+                <h3>Call Us</h3>
+                <a href="tel:+919034545850">+91 9034545850</a>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">⌖</div>
+              <div>
+                <h3>Our Location</h3>
+                <p>Kaithal, Haryana, India</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon" aria-hidden="true">◷</div>
+              <div>
+                <h3>Enquiries</h3>
+                <p>Send us your project details and we can discuss the next steps.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="contact-note">
+            <h3>Not sure which service you need?</h3>
+            <p>
+              Briefly describe your business and what you'd like to improve.
+              We can discuss suitable options together.
+            </p>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="form-card" id="contactForm">
+          <span class="eyebrow">Project Enquiry</span>
+
+          <h2>Tell Us About Your <span class="highlight">Project</span></h2>
+
+          <p class="form-intro">
+            Fill in the details below. When you submit the form, WhatsApp
+            will open with your enquiry message ready to send.
+          </p>
+
+          <form id="enquiryForm">
+
+            <div class="form-grid">
+
+              <div class="form-group">
+                <label for="fullName">Full Name *</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="businessName">Business Name</label>
+                <input
+                  type="text"
+                  id="businessName"
+                  name="businessName"
+                  placeholder="Your business name"
+                  autocomplete="organization"
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  autocomplete="tel"
+                  required
+                >
+              </div>
+
+              <div class="form-group full-width">
+                <label for="service">Service You're Interested In *</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="Website Development">Website Development</option>
+                  <option value="SEO Services">SEO Services</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                  <option value="Social Media Marketing">Social Media Marketing</option>
+                  <option value="Google Ads">Google Ads</option>
+                  <option value="Meta Ads">Meta Ads</option>
+                  <option value="Multiple Services">Multiple Services</option>
+                  <option value="Other / Need Guidance">Other / Need Guidance</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="message">Tell Us About Your Project *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="What does your business do, and how can we help?"
+                  required
+                ></textarea>
+              </div>
+
+            </div>
+
+            <button type="submit" class="btn form-submit">
+              Continue to WhatsApp ↗
+            </button>
+
+            <p class="form-disclaimer">
+              This form opens WhatsApp with your details in a draft message.
+              You must press Send in WhatsApp to deliver the enquiry.
+            </p>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="contact-strip">
+      <div class="container strip-inner">
+
+        <div>
+          <h2>Ready to Strengthen Your Online Presence?</h2>
+          <p>Let's discuss the digital services that fit your business goals.</p>
+        </div>
+
+        <a href="mailto:businexperts@gmail.com" class="btn">
+          Email Businexperts ↗
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SAME FOOTER AS OTHER PAGES -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">BE</span>
+            <span>
+              <span class="brand-name">Busin<span>experts</span></span>
+              <span class="brand-tagline">Digital Growth Partner</span>
+            </span>
+          </a>
+
+          <p>
+            Helping businesses strengthen their online presence through
+            website development and digital marketing solutions.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Portfolio.html">Our Portfolio</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="Services.html">Website Development</a></li>
+            <li><a href="Services.html">SEO Services</a></li>
+            <li><a href="Services.html">Digital Marketing</a></li>
+            <li><a href="Services.html">Google Ads</a></li>
+            <li><a href="Services.html">Meta Ads</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Details</h3>
+          <ul>
+            <li><a href="mailto:businexperts@gmail.com">businexperts@gmail.com</a></li>
+            <li><a href="tel:+919034545850">+91 9034545850</a></li>
+            <li><p>Kaithal, Haryana, India</p></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> Businexperts. All rights reserved.</p>
+        <p>Built for better digital possibilities.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Mobile navigation
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    // Close mobile navigation after selecting a page
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // Contact form: open WhatsApp with a prefilled enquiry
+    document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const businessName = document.getElementById("businessName").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const service = document.getElementById("service").value;
+      const message = document.getElementById("message").value.trim();
+
+      const whatsappMessage = [
+        "Hello Businexperts!",
+        "",
+        "I would like to enquire about your services.",
+        "",
+        "Name: " + fullName,
+        "Business Name: " + (businessName || "Not provided"),
+        "Email: " + email,
+        "Phone: " + phone,
+        "Service: " + service,
+        "Project Details: " + message
+      ].join("\n");
+
+      const whatsappURL =
+        "https://wa.me/919034545850?text=" +
+        encodeURIComponent(whatsappMessage);
+
+      window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    });
+
+    // Current copyright year
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
+```

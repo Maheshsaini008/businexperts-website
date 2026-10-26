@@ -1,0 +1,1013 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | Businexperts Digital Growth Partner</title>
+<meta name="description" content="Explore Businexperts services including website design, SEO, social media marketing, Meta Ads, Google Ads and branding for businesses.">
+
+<style>
+:root {
+  --red: #ed202e;
+  --dark: #171717;
+  --text: #555;
+  --light: #f7f7f8;
+  --white: #fff;
+  --border: #e8e8e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background: #fff;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1264px, 92%);
+  margin: 0 auto;
+}
+
+/* HEADER — MATCHED TO HOME AND ABOUT US */
+.site-header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,.05);
+}
+
+.header-inner {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 50px;
+  height: 50px;
+  background: var(--red);
+  color: #fff;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand-name {
+  color: #171717;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.7px;
+}
+
+.brand-name span { color: var(--red); }
+
+.brand-tagline {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: .8px;
+  margin-top: 2px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main-nav a {
+  position: relative;
+  padding: 12px 0;
+  color: #292929;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--red);
+}
+
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--red);
+  bottom: 0;
+  left: 0;
+}
+
+.header-cta {
+  background: var(--red);
+  color: #fff;
+  padding: 15px 21px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background .2s ease;
+}
+
+.header-cta:hover { background: #c91825; }
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #171717;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 23px;
+  border-radius: 5px;
+  background: var(--red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid var(--red);
+  transition: .2s ease;
+}
+
+.btn:hover {
+  background: #c91825;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #777;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: var(--dark);
+  border-color: #fff;
+}
+
+/* HERO */
+.services-hero {
+  position: relative;
+  overflow: hidden;
+  background: #171717;
+  color: #fff;
+  padding: 90px 0 85px;
+}
+
+.services-hero::before {
+  content: "";
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background: rgba(237,32,46,.19);
+  top: -170px;
+  right: -60px;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 850px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.services-hero h1 {
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.services-hero h1 span { color: var(--red); }
+
+.services-hero p {
+  color: #d1d1d1;
+  font-size: 17px;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+/* GENERAL SECTIONS */
+.section { padding: 78px 0; }
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 3.4vw, 41px);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 span { color: var(--red); }
+
+.section-heading p {
+  color: var(--text);
+  font-size: 15px;
+}
+
+/* SERVICES GRID */
+.services-section { background: var(--light); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 30px 26px;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.07);
+}
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  background: #fff0f1;
+  color: var(--red);
+  border-radius: 12px;
+  font-size: 28px;
+  margin-bottom: 22px;
+}
+
+.service-card h3 {
+  font-size: 21px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.service-card ul {
+  list-style: none;
+  margin-bottom: 23px;
+}
+
+.service-card li {
+  font-size: 13px;
+  color: #444;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.service-card li::before {
+  content: "✓";
+  color: var(--red);
+  font-weight: 800;
+  margin-right: 9px;
+}
+
+.service-link {
+  display: inline-block;
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.service-link:hover { text-decoration: underline; }
+
+/* WHY CHOOSE US */
+.why-section {
+  background: #fff;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.why-visual {
+  background: #171717;
+  color: #fff;
+  border-radius: 14px;
+  min-height: 365px;
+  padding: 42px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-visual::after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: var(--red);
+  top: -90px;
+  right: -45px;
+}
+
+.visual-mark {
+  color: rgba(255,255,255,.12);
+  font-size: 100px;
+  line-height: 1;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.why-visual h3 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(25px, 3vw, 35px);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.why-visual h3 span { color: var(--red); }
+
+.why-visual p {
+  position: relative;
+  z-index: 1;
+  color: #d0d0d0;
+  font-size: 14px;
+  max-width: 380px;
+}
+
+.why-content .eyebrow { margin-bottom: 12px; }
+
+.why-content h2 {
+  font-size: clamp(29px, 3.5vw, 42px);
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.why-content h2 span { color: var(--red); }
+
+.why-content > p {
+  color: var(--text);
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.benefit {
+  display: flex;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.benefit-check {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #fff0f1;
+  color: var(--red);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.benefit h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.benefit p {
+  color: var(--text);
+  font-size: 13px;
+}
+
+/* PROCESS */
+.process-section { background: var(--light); }
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.process-item {
+  background: #fff;
+  padding: 25px 21px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+
+.process-number {
+  width: 43px;
+  height: 43px;
+  border-radius: 8px;
+  background: #fff0f1;
+  color: var(--red);
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 17px;
+}
+
+.process-item h3 {
+  font-size: 17px;
+  margin-bottom: 9px;
+}
+
+.process-item p {
+  color: var(--text);
+  font-size: 13px;
+}
+
+/* CTA */
+.services-cta {
+  background: #171717;
+  color: #fff;
+  text-align: center;
+  padding: 68px 0;
+}
+
+.services-cta h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.services-cta h2 span { color: var(--red); }
+
+.services-cta p {
+  max-width: 650px;
+  color: #ccc;
+  margin: 0 auto 25px;
+  font-size: 15px;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #101010;
+  color: #fff;
+  padding: 52px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 38px;
+}
+
+.footer-about p {
+  color: #bdbdbd;
+  font-size: 14px;
+  max-width: 350px;
+  margin-top: 16px;
+}
+
+.footer-title {
+  font-size: 16px;
+  margin-bottom: 17px;
+}
+
+.footer-links {
+  display: grid;
+  gap: 10px;
+}
+
+.footer-links a,
+.footer-contact p {
+  color: #bdbdbd;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.footer-links a:hover { color: #fff; }
+.footer-contact p { margin-bottom: 10px; }
+
+/* Footer logo stays white/red on dark background */
+.site-footer .brand-name { color: #fff; }
+.site-footer .brand-tagline { color: #aaa; }
+
+.footer-bottom {
+  border-top: 1px solid #303030;
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.footer-bottom span { color: var(--red); }
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .header-inner { gap: 18px; }
+  .main-nav { gap: 17px; }
+  .main-nav a { font-size: 13px; }
+  .brand-name { font-size: 22px; }
+  .header-cta { padding: 13px 15px; }
+
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .process-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .why-grid { gap: 32px; }
+}
+
+@media (max-width: 800px) {
+  .header-inner {
+    min-height: 78px;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -4.35%;
+    right: -4.35%;
+    background: #fff;
+    padding: 14px 5% 20px;
+    box-shadow: 0 10px 18px rgba(0,0,0,.08);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav.open { display: flex; }
+
+  .main-nav a {
+    padding: 13px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+
+  .main-nav a.active::after { display: none; }
+
+  .header-cta {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .services-hero { padding: 70px 0; }
+  .section { padding: 60px 0; }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-visual { min-height: 300px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-about { grid-column: 1 / -1; }
+}
+
+@media (max-width: 560px) {
+  .brand-mark {
+    width: 43px;
+    height: 43px;
+    font-size: 18px;
+  }
+
+  .brand-name { font-size: 21px; }
+
+  .brand-tagline {
+    font-size: 9px;
+    letter-spacing: .5px;
+  }
+
+  .header-cta { display: none; }
+
+  .services-hero h1 { letter-spacing: -.7px; }
+  .services-hero p { font-size: 15px; }
+
+  .btn {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .btn-outline { margin: 10px 0 0; }
+
+  .services-grid,
+  .process-grid { grid-template-columns: 1fr; }
+
+  .service-card { padding: 25px 22px; }
+  .why-visual { padding: 30px; min-height: 270px; }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-about { grid-column: auto; }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="index.html" class="brand" aria-label="Businexperts Home">
+      <div class="brand-mark">BE</div>
+      <div class="brand-copy">
+        <div class="brand-name">Busin<span>experts</span></div>
+        <div class="brand-tagline">DIGITAL GROWTH PARTNER</div>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="Services.html" class="active">Services</a>
+      <a href="Portfolio.html">Our Portfolio</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+
+    <a href="Contact.html" class="header-cta">Let's Talk ↗</a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="services-hero">
+  <div class="container hero-content">
+    <span class="eyebrow">What We Do</span>
+    <h1>Digital Services for <span>Business Growth.</span></h1>
+    <p>
+      Every business deserves a strong online presence. We help you present
+      your brand professionally, reach relevant audiences and build a digital
+      foundation that supports your business goals.
+    </p>
+    <a href="#all-services" class="btn">Explore Our Services</a>
+    <a href="Contact.html" class="btn btn-outline">Let's Talk</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services-section" id="all-services">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Our Services</span>
+      <h2>Solutions to Help Your Business <span>Stand Out</span></h2>
+      <p>
+        From creating your online identity to promoting your business,
+        explore our digital services.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-icon">✦</div>
+        <h3>Website Design & Development</h3>
+        <p>
+          Make a professional first impression with a website that presents
+          your business, services and contact information clearly.
+        </p>
+        <ul>
+          <li>Business websites</li>
+          <li>Mobile-friendly layouts</li>
+          <li>Landing pages</li>
+          <li>Website redesign</li>
+        </ul>
+        <a href="Contact.html" class="service-link">Discuss Your Website →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">⌕</div>
+        <h3>SEO & Google Visibility</h3>
+        <p>
+          Improve your website's search readiness and help potential customers
+          discover relevant information about your business.
+        </p>
+        <ul>
+          <li>On-page SEO basics</li>
+          <li>Keyword research</li>
+          <li>Website content guidance</li>
+          <li>Search visibility improvements</li>
+        </ul>
+        <a href="Contact.html" class="service-link">Discuss SEO →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">◎</div>
+        <h3>Social Media Marketing</h3>
+        <p>
+          Build a consistent social media presence with useful content
+          designed around your brand and audience.
+        </p>
+        <ul>
+          <li>Content planning</li>
+          <li>Post and reel concepts</li>
+          <li>Creative direction</li>
+          <li>Profile presentation</li>
+        </ul>
+        <a href="Contact.html" class="service-link">Discuss Social Media →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">↗</div>
+        <h3>Meta Ads</h3>
+        <p>
+          Plan Facebook and Instagram advertising campaigns with a clear
+          audience, relevant message and defined objective.
+        </p>
+        <ul>
+          <li>Campaign planning</li>
+          <li>Audience selection</li>
+          <li>Ad creative concepts</li>
+          <li>Performance monitoring</li>
+        </ul>
+        <a href="Contact.html" class="service-link">Discuss Meta Ads →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">⌕</div>
+        <h3>Google Ads</h3>
+        <p>
+          Reach people searching for relevant products or services through
+          planned search advertising campaigns.
+        </p>
+        <ul>
+          <li>Search campaign planning</li>
+          <li>Keyword targeting</li>
+          <li>Ad copy preparation</li>
+          <li>Conversion tracking guidance</li>
+        </ul>
+        <a href="Contact.html" class="service-link">Discuss Google Ads →</a>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">▧</div>
+        <h3>Branding & Creative Design</h3>
+        <p>
+          Present your business with consistent visual communication across
+          your digital channels.
+        </p>
+        <ul>
+          <li>Social media creatives</li>
+          <li>Promotional graphics</li>
+          <li>Brand colour direction</li>
+          <li>Marketing design concepts</li>
+        </ul>
+        <a href="Contact.html" class="service-link">Discuss Creative Design →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section why-section">
+  <div class="container why-grid">
+
+    <div class="why-visual">
+      <div class="visual-mark">BE</div>
+      <span class="eyebrow">Our Approach</span>
+      <h3>Understand.<br>Create. <span>Grow.</span></h3>
+      <p>
+        Digital solutions shaped around your business, audience and objectives.
+      </p>
+    </div>
+
+    <div class="why-content">
+      <span class="eyebrow">Why Businexperts</span>
+      <h2>Your Business Goals. <span>Our Digital Focus.</span></h2>
+      <p>
+        We believe digital marketing should begin with understanding your
+        business. We focus on practical solutions, clear communication and
+        a consistent brand experience.
+      </p>
+
+      <div class="benefit">
+        <div class="benefit-check">✓</div>
+        <div>
+          <h3>Solutions Around Your Needs</h3>
+          <p>We start by understanding your services, audience and priorities.</p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-check">✓</div>
+        <div>
+          <h3>Professional Presentation</h3>
+          <p>We help your brand communicate clearly across digital platforms.</p>
+        </div>
+      </div>
+
+      <div class="benefit">
+        <div class="benefit-check">✓</div>
+        <div>
+          <h3>Goal-Oriented Planning</h3>
+          <p>We align the proposed work with your objectives and budget discussions.</p>
+        </div>
+      </div>
+
+      <a href="Contact.html" class="btn">Talk About Your Goals</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process-section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Our Process</span>
+      <h2>A Simple Process. <span>Clear Direction.</span></h2>
+      <p>
+        We keep the process straightforward so you understand the next steps
+        before work begins.
+      </p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-number">01</div>
+        <h3>Understand</h3>
+        <p>We learn about your business, audience and project requirements.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">02</div>
+        <h3>Plan</h3>
+        <p>We discuss suitable services, priorities and project scope.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">03</div>
+        <h3>Create</h3>
+        <p>We develop the agreed website, campaign or creative deliverables.</p>
+      </div>
+
+      <div class="process-item">
+        <div class="process-number">04</div>
+        <h3>Review</h3>
+        <p>We review the work with you and prepare the agreed final delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="services-cta">
+  <div class="container">
+    <span class="eyebrow">Let's Get Started</span>
+    <h2>Ready to Build Your <span>Digital Presence?</span></h2>
+    <p>
+      Tell us about your business and what you want to achieve.
+      Let's explore the right digital solution for you.
+    </p>
+    <a href="Contact.html" class="btn">Contact Businexperts ↗</a>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-about">
+        <a href="index.html" class="brand">
+          <div class="brand-mark">BE</div>
+          <div class="brand-copy">
+            <div class="brand-name">Busin<span>experts</span></div>
+            <div class="brand-tagline">DIGITAL GROWTH PARTNER</div>
+          </div>
+        </a>
+        <p>
+          Helping businesses strengthen their online presence through
+          website design, digital marketing and creative solutions.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Quick Links</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="Services.html">Services</a>
+          <a href="Portfolio.html">Our Portfolio</a>
+          <a href="Contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h3 class="footer-title">Contact Information</h3>
+        <p>Email: <a href="mailto:businexperts@gmail.com">businexperts@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919034545850">+91 9034545850</a></p>
+        <p>Location: Kaithal, Haryana, India</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> Businexperts. All rights reserved.</p>
+      <p>Designed with care for your digital growth.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", function () {
+  const isOpen = mainNav.classList.toggle("open");
+
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+  );
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+mainNav.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    mainNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    menuToggle.textContent = "☰";
+  });
+});
+
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>

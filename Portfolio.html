@@ -1,0 +1,1036 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Portfolio | Businexperts</title>
+<meta name="description" content="Explore Businexperts website design, digital marketing, paid advertising and branding portfolio concepts.">
+
+<style>
+:root {
+  --red: #ed202e;
+  --dark: #171717;
+  --text: #555;
+  --light: #f7f7f8;
+  --white: #fff;
+  --border: #e8e8e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
+  background: #fff;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1264px, 92%);
+  margin: auto;
+}
+
+/* HEADER — MATCHED TO ABOUT US */
+.site-header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0,0,0,.05);
+}
+
+.header-inner {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 50px;
+  height: 50px;
+  background: var(--red);
+  color: white;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand-name {
+  color: #171717;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.7px;
+}
+
+.brand-name span { color: var(--red); }
+
+.brand-tagline {
+  color: #777;
+  font-size: 11px;
+  letter-spacing: .8px;
+  margin-top: 2px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.main-nav a {
+  position: relative;
+  padding: 12px 0;
+  color: #292929;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--red);
+}
+
+.main-nav a.active::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--red);
+  bottom: 0;
+  left: 0;
+}
+
+.header-cta {
+  background: var(--red);
+  color: #fff;
+  padding: 15px 21px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background .2s ease;
+}
+
+.header-cta:hover { background: #c91825; }
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: #171717;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 23px;
+  border-radius: 5px;
+  background: var(--red);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid var(--red);
+  transition: .2s ease;
+}
+
+.btn:hover {
+  background: #c91825;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: #777;
+  margin-left: 10px;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: var(--dark);
+  border-color: #fff;
+}
+
+/* HERO */
+.portfolio-hero {
+  position: relative;
+  overflow: hidden;
+  background: #171717;
+  color: #fff;
+  padding: 92px 0 88px;
+}
+
+.portfolio-hero::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: rgba(227,41,53,.18);
+  top: -170px;
+  right: -50px;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 850px;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--red);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.portfolio-hero h1 {
+  font-size: clamp(36px, 5vw, 60px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+
+.portfolio-hero h1 span { color: var(--red); }
+
+.portfolio-hero p {
+  color: #d1d1d1;
+  font-size: 17px;
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+/* SECTION */
+.section { padding: 78px 0; }
+
+.section-heading {
+  max-width: 700px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.section-heading h2 span { color: var(--red); }
+
+.section-heading p {
+  color: var(--text);
+  font-size: 15px;
+}
+
+/* PORTFOLIO */
+.portfolio-section { background: var(--light); }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 35px;
+}
+
+.filter-btn {
+  border: 1px solid #dedede;
+  background: #fff;
+  padding: 10px 17px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #444;
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 38px rgba(0,0,0,.09);
+}
+
+.project-visual {
+  min-height: 225px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.visual-website { background: #f2e8e5; }
+.visual-marketing { background: #e9edf7; }
+.visual-ads { background: #f8e8e9; }
+.visual-branding { background: #eee9e2; }
+.visual-ecommerce { background: #e7efeb; }
+.visual-social { background: #f4eaf6; }
+
+.mock-window {
+  background: #fff;
+  border-radius: 7px;
+  width: 100%;
+  max-width: 300px;
+  padding: 13px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  transform: rotate(-2deg);
+}
+
+.window-bar {
+  display: flex;
+  gap: 4px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #eee;
+}
+
+.window-bar i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.mock-heading {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 15px 0 9px;
+}
+
+.mock-heading span { color: var(--red); }
+
+.mock-lines {
+  height: 5px;
+  width: 75%;
+  border-radius: 5px;
+  background: #e7e7e7;
+  margin: 6px 0;
+}
+
+.mock-lines.short { width: 48%; }
+
+.mock-button {
+  height: 20px;
+  width: 82px;
+  border-radius: 4px;
+  background: var(--red);
+  margin-top: 13px;
+}
+
+.chart-mock {
+  width: 100%;
+  max-width: 290px;
+  padding: 19px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(0,0,0,.1);
+}
+
+.chart-title {
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.chart-bars {
+  display: flex;
+  align-items: end;
+  justify-content: space-around;
+  height: 95px;
+  border-bottom: 1px solid #ddd;
+  gap: 9px;
+}
+
+.chart-bars span {
+  display: block;
+  width: 12%;
+  background: var(--red);
+  border-radius: 3px 3px 0 0;
+}
+
+.chart-bars span:nth-child(1) { height: 35%; }
+.chart-bars span:nth-child(2) { height: 52%; }
+.chart-bars span:nth-child(3) { height: 43%; }
+.chart-bars span:nth-child(4) { height: 73%; }
+.chart-bars span:nth-child(5) { height: 60%; }
+.chart-bars span:nth-child(6) { height: 92%; }
+
+.ad-mock {
+  width: 100%;
+  max-width: 280px;
+  background: #fff;
+  border-radius: 9px;
+  padding: 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.1);
+}
+
+.ad-label {
+  display: inline-block;
+  color: #777;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.ad-mock h3 {
+  font-size: 19px;
+  line-height: 1.25;
+  margin-bottom: 7px;
+}
+
+.ad-mock p { font-size: 11px; color: #666; }
+
+.ad-mock .mock-button {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px;
+}
+
+.brand-mock {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+.brand-mock strong {
+  font-size: 35px;
+  letter-spacing: -2px;
+}
+
+.brand-mock strong span { color: var(--red); }
+
+.brand-mock small {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.shop-mock {
+  width: 100%;
+  max-width: 285px;
+  padding: 13px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(0,0,0,.1);
+}
+
+.shop-image {
+  height: 100px;
+  background: linear-gradient(135deg,#e9dfd2,#b9c9bd);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+}
+
+.shop-mock h3 { font-size: 15px; margin-top: 10px; }
+.shop-mock p { font-size: 11px; color: #777; }
+
+.social-mock {
+  width: 180px;
+  min-height: 190px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.1);
+  transform: rotate(3deg);
+}
+
+.social-image {
+  height: 100px;
+  background: linear-gradient(140deg,#171717 50%,var(--red) 50%);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.social-mock p { font-size: 11px; font-weight: 700; margin-top: 9px; }
+.social-mock small { color: #777; font-size: 9px; }
+
+.project-info { padding: 22px; }
+
+.project-category {
+  display: inline-block;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-weight: 800;
+  margin-bottom: 9px;
+}
+
+.project-info h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 9px;
+}
+
+.project-info p {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 17px;
+}
+
+.project-link {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.project-link:hover { text-decoration: underline; }
+.project-card[hidden] { display: none; }
+
+.demo-note {
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  margin-top: 25px;
+}
+
+/* PROCESS */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 22px;
+  margin-top: 38px;
+}
+
+.process-item {
+  padding: 25px 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.process-number {
+  width: 43px;
+  height: 43px;
+  border-radius: 7px;
+  background: #fff0f1;
+  color: var(--red);
+  display: grid;
+  place-items: center;
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 17px;
+}
+
+.process-item h3 { font-size: 17px; margin-bottom: 9px; }
+.process-item p { color: var(--text); font-size: 13px; }
+
+/* CTA */
+.portfolio-cta {
+  background: #171717;
+  color: #fff;
+  padding: 65px 0;
+  text-align: center;
+}
+
+.portfolio-cta h2 {
+  font-size: clamp(27px,3.5vw,39px);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.portfolio-cta h2 span { color: var(--red); }
+
+.portfolio-cta p {
+  color: #ccc;
+  max-width: 620px;
+  margin: 0 auto 25px;
+  font-size: 15px;
+}
+
+/* FOOTER */
+.site-footer {
+  background: #101010;
+  color: #fff;
+  padding: 52px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 38px;
+}
+
+.footer-about p {
+  color: #bdbdbd;
+  font-size: 14px;
+  max-width: 350px;
+  margin-top: 16px;
+}
+
+.footer-title { font-size: 16px; margin-bottom: 17px; }
+
+.footer-links { display: grid; gap: 10px; }
+
+.footer-links a,
+.footer-contact p {
+  color: #bdbdbd;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.footer-links a:hover { color: #fff; }
+.footer-contact p { margin-bottom: 10px; }
+
+.footer-bottom {
+  border-top: 1px solid #303030;
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.footer-bottom span { color: var(--red); }
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .header-inner { gap: 18px; }
+  .main-nav { gap: 17px; }
+  .main-nav a { font-size: 13px; }
+  .brand-name { font-size: 22px; }
+  .header-cta { padding: 13px 15px; }
+
+  .portfolio-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .process-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+
+@media (max-width: 800px) {
+  .header-inner { min-height: 78px; position: relative; }
+  .menu-toggle { display: block; margin-left: auto; }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -4.35%;
+    right: -4.35%;
+    background: #fff;
+    padding: 14px 5% 20px;
+    box-shadow: 0 10px 18px rgba(0,0,0,.08);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .main-nav.open { display: flex; }
+  .main-nav a { padding: 13px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+  .main-nav a.active::after { display: none; }
+  .header-cta { padding: 12px 14px; font-size: 13px; }
+
+  .portfolio-hero { padding: 72px 0; }
+  .section { padding: 60px 0; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-about { grid-column: 1 / -1; }
+}
+
+@media (max-width: 560px) {
+  .brand-mark { width: 43px; height: 43px; font-size: 18px; }
+  .brand-name { font-size: 21px; }
+  .brand-tagline { font-size: 9px; letter-spacing: .5px; }
+  .header-cta { display: none; }
+
+  .portfolio-hero h1 { letter-spacing: -.7px; }
+  .portfolio-hero p { font-size: 15px; }
+  .btn { padding: 12px 16px; font-size: 13px; }
+  .btn-outline { margin: 10px 0 0; }
+
+  .portfolio-grid,
+  .process-grid { grid-template-columns: 1fr; }
+
+  .project-visual { min-height: 215px; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-about { grid-column: auto; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Businexperts Home">
+      <div class="brand-mark">BE</div>
+      <div class="brand-copy">
+        <div class="brand-name">Busin<span>experts</span></div>
+        <div class="brand-tagline">DIGITAL GROWTH PARTNER</div>
+      </div>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="mainNav">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="Services.html">Services</a>
+      <a href="Portfolio.html" class="active">Our Portfolio</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+
+    <a href="Contact.html" class="header-cta">Let's Talk ↗</a>
+  </div>
+</header>
+
+<main>
+
+<section class="portfolio-hero">
+  <div class="container hero-content">
+    <span class="eyebrow">Our Portfolio</span>
+    <h1>Ideas Into Digital <span>Experiences.</span></h1>
+    <p>
+      Explore the creative concepts behind websites, digital marketing,
+      advertising and brand identity. We focus on helping businesses build
+      a stronger digital presence.
+    </p>
+    <a href="#projects" class="btn">Explore Our Work</a>
+    <a href="Contact.html" class="btn btn-outline">Start Your Project</a>
+  </div>
+</section>
+
+<section class="section portfolio-section" id="projects">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Selected Work</span>
+      <h2>Our Work, Our <span>Creative Approach</span></h2>
+      <p>
+        From professional websites to digital campaigns, explore the types
+        of projects we can help your business create.
+      </p>
+    </div>
+
+    <div class="filters" aria-label="Filter portfolio projects">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+      <button class="filter-btn" data-filter="website" aria-pressed="false">Website Design</button>
+      <button class="filter-btn" data-filter="marketing" aria-pressed="false">Digital Marketing</button>
+      <button class="filter-btn" data-filter="ads" aria-pressed="false">Paid Ads</button>
+      <button class="filter-btn" data-filter="branding" aria-pressed="false">Branding</button>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <article class="project-card" data-category="website">
+        <div class="project-visual visual-website">
+          <div class="mock-window">
+            <div class="window-bar"><i></i><i></i><i></i></div>
+            <div class="mock-heading">Build Your<br><span>Online Presence</span></div>
+            <div class="mock-lines"></div>
+            <div class="mock-lines short"></div>
+            <div class="mock-button"></div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Website Design</span>
+          <h3>Business Website Concept</h3>
+          <p>A responsive website concept designed to present business services and help customers get in touch.</p>
+          <a class="project-link" href="Contact.html">Discuss a Similar Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="marketing">
+        <div class="project-visual visual-marketing">
+          <div class="chart-mock">
+            <div class="chart-title">Digital Growth Dashboard</div>
+            <div class="chart-bars">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Digital Marketing</span>
+          <h3>Digital Growth Strategy</h3>
+          <p>A marketing strategy concept combining online visibility, content planning and performance tracking.</p>
+          <a class="project-link" href="Contact.html">Discuss a Similar Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="ads">
+        <div class="project-visual visual-ads">
+          <div class="ad-mock">
+            <span class="ad-label">Ad Preview Concept</span>
+            <h3>Reach Your<br>Next Customer</h3>
+            <p>Promote your services to a relevant audience with a planned advertising campaign.</p>
+            <div class="mock-button">Learn More</div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Meta & Google Ads</span>
+          <h3>Paid Advertising Concept</h3>
+          <p>An advertising concept focused on clear messaging, audience relevance and a strong call to action.</p>
+          <a class="project-link" href="Contact.html">Discuss a Similar Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="branding">
+        <div class="project-visual visual-branding">
+          <div class="brand-mock">
+            <strong>B<span>E</span></strong>
+            <small>Brand Identity</small>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Branding</span>
+          <h3>Brand Identity Concept</h3>
+          <p>A visual identity concept exploring consistent brand style, colours and professional presentation.</p>
+          <a class="project-link" href="Contact.html">Discuss a Similar Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="website">
+        <div class="project-visual visual-ecommerce">
+          <div class="shop-mock">
+            <div class="shop-image">🛍️</div>
+            <h3>Discover Something New</h3>
+            <p>Online store layout concept · Product showcase</p>
+            <div class="mock-button"></div>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">E-commerce Website</span>
+          <h3>Online Store Concept</h3>
+          <p>A product-focused storefront concept with clear product presentation and easy browsing.</p>
+          <a class="project-link" href="Contact.html">Discuss a Similar Project →</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-category="marketing">
+        <div class="project-visual visual-social">
+          <div class="social-mock">
+            <div class="social-image">MAKE YOUR<br>BRAND STAND OUT</div>
+            <p>Social Media Creative</p>
+            <small>Content design concept</small>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Social Media</span>
+          <h3>Social Media Creative Concept</h3>
+          <p>A social content concept designed to communicate a brand's message with a consistent visual style.</p>
+          <a class="project-link" href="Contact.html">Discuss a Similar Project →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="demo-note">
+      Note: These are illustrative demo concepts, not verified client projects or performance results.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">How We Work</span>
+      <h2>From First Idea to <span>Final Delivery</span></h2>
+      <p>A clear process helps us understand your business and plan the right digital solution.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-item">
+        <div class="process-number">01</div>
+        <h3>Understand</h3>
+        <p>We learn about your business, audience, goals and requirements.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-number">02</div>
+        <h3>Plan</h3>
+        <p>We outline the approach, deliverables and direction for your project.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-number">03</div>
+        <h3>Create</h3>
+        <p>We develop the creative work around your brand and project needs.</p>
+      </div>
+      <div class="process-item">
+        <div class="process-number">04</div>
+        <h3>Deliver</h3>
+        <p>We review the work with you and prepare the agreed final deliverables.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio-cta">
+  <div class="container">
+    <h2>Have a Project in <span>Mind?</span></h2>
+    <p>Let's discuss your business goals and explore how Businexperts can help you build a stronger digital presence.</p>
+    <a href="Contact.html" class="btn">Let's Talk About Your Project</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="index.html" class="brand">
+          <div class="brand-mark">BE</div>
+          <div class="brand-copy">
+            <div class="brand-name">Busin<span>experts</span></div>
+            <div class="brand-tagline">DIGITAL GROWTH PARTNER</div>
+          </div>
+        </a>
+        <p>
+          Helping businesses strengthen their online presence through website
+          design, digital marketing and creative solutions.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-title">Quick Links</h3>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="Services.html">Services</a>
+          <a href="Portfolio.html">Our Portfolio</a>
+          <a href="Contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h3 class="footer-title">Contact Information</h3>
+        <p>Email: <a href="mailto:businexperts@gmail.com">businexperts@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919034545850">+91 9034545850</a></p>
+        <p>Location: Kaithal, Haryana, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="currentYear"></span> Businexperts. All rights reserved.</p>
+      <p>Designed with care for your digital growth.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", function () {
+  const isOpen = mainNav.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+  );
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+mainNav.querySelectorAll("a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    mainNav.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    menuToggle.textContent = "☰";
+  });
+});
+
+document.querySelectorAll(".filter-btn").forEach(function (button) {
+  button.addEventListener("click", function () {
+    const filter = button.dataset.filter;
+
+    document.querySelectorAll(".filter-btn").forEach(function (item) {
+      item.classList.remove("active");
+      item.setAttribute("aria-pressed", "false");
+    });
+
+    button.classList.add("active");
+    button.setAttribute("aria-pressed", "true");
+
+    document.querySelectorAll(".project-card").forEach(function (card) {
+      card.hidden = filter !== "all" && card.dataset.category !== filter;
+    });
+  });
+});
+
+document.getElementById("currentYear").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
